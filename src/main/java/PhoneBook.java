@@ -20,6 +20,12 @@ public class PhoneBook {
 
     public String findByNumber(String value) {
 
-        return null;
+        Optional<String> result = map.entrySet()
+                .stream()
+                .filter(entry -> value.equals(entry.getValue()))
+                .map(Map.Entry::getKey)
+                .findFirst();
+
+        return result.get();
     }
 }
