@@ -1,7 +1,4 @@
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 public class PhoneBook {
 
@@ -32,6 +29,10 @@ public class PhoneBook {
 
     public String findByName(String key){
         return map.get(key);
+    }
+
+    public ArrayList<String> printAllNames(){
+        return null;
     }
 
 }
