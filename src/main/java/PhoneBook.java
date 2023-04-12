@@ -31,7 +31,7 @@ public class PhoneBook {
 
 
     public String findByName(String key){
-        return null;
+        return map.get(key);
     }
 
 }
