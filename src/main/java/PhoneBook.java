@@ -8,7 +8,12 @@ public class PhoneBook {
     private Map<String, String> map = null;
 
     public int add(String name, String phoneNumber){
+        if(map == null){
+            map = new HashMap<>();
+            map.put(name, phoneNumber);
+        }
 
-        return 0;
+        map.put(name, phoneNumber);
+        return map.size();
     }
 }
