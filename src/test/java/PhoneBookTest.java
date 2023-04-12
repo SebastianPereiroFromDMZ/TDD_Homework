@@ -13,7 +13,6 @@ public class PhoneBookTest {
     PhoneBook phoneBook = new PhoneBook();
 
 
-
     @Test
     void testAdd() {
 
@@ -27,12 +26,24 @@ public class PhoneBookTest {
 
 
     @Test
-    void testFindByNumber(){
+    void testFindByNumber() {
         phoneBook.add("Братан", "8-999-134-22-11");
 
         String result = phoneBook.findByNumber("8-999-134-22-11");
 
         String expected = "Братан";
+
+        assertEquals(expected, result);
+    }
+
+
+    @Test
+    void testFindByName() {
+        phoneBook.add("Братан", "8-999-134-22-11");
+
+        String result = phoneBook.findByName("Братан");
+
+        String expected = "8-999-134-22-11";
 
         assertEquals(expected, result);
     }
