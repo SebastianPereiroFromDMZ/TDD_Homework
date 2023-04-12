@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class PhoneBook {
 
@@ -32,7 +33,10 @@ public class PhoneBook {
     }
 
     public ArrayList<String> printAllNames(){
-        return null;
+        Set<String> keys = map.keySet();
+         return (ArrayList<String>) new ArrayList<>(keys).stream()
+                 .sorted()
+                 .collect(Collectors.toList());
     }
 
 }
